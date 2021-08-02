@@ -1,4 +1,4 @@
 backend/node_modules/*
 backend/package-lock.json
-src/index.js
+backend/src/index.js
 StationSchema.txt
