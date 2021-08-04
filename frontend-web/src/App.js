@@ -1,9 +1,11 @@
 import React from 'react';
 
+
 import StationForm from './components/StationForm';
 
 import './global.css';
 import './App.css';
+import './Sidebar.css';
 
 
 
@@ -11,7 +13,14 @@ function App() {
   return (
     <>
       <div id="app">
-        <StationForm />
+        <aside>
+        <strong>Cadastrar</strong>
+          <StationForm />
+        </aside>
+
+        <main>
+
+        </main>
       </div>
    </>
   );

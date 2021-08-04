@@ -1,0 +1,103 @@
+form {
+    margin-top: 30px;
+}
+
+.input-block + .input-block {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input-group .input-block {
+    margin-top: 0;
+}
+
+.input-block label {
+    color: #ACACAC;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+
+.input-block input {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+.input-radio-block {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-radio-block label {
+    color: #ACACAC;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.input-radio-block input {
+    width: 20px;
+    height: 14px;
+}
+
+.input-radio-block span {
+    color: #ACACAC;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-right: 10px;
+}
+
+.button-group {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+button[type=submit] {
+    background: #7d40e7;
+    border-radius: 2px;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+    box-shadow: none;
+}
+
+button[type=submit]:hover{
+    background: #6931ca;
+}
+
+button[type=button] {
+    background: #DC143C;
+    border-radius: 2px;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+    
+}
+
+button[type=button]:hover{
+    background: #EA0E0E;
+}

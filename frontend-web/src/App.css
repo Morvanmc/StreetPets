@@ -1,6 +1,6 @@
 #app {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px;
     padding: 60px 30px;
 
     display: flex;
@@ -11,13 +11,4 @@
 
 #app main {
     margin-left: 30px;
-}
-
-#logo {
-    width: 750px;
-    height: 600px;
-
-    display: block;
-
-    margin: auto;
 }
