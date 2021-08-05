@@ -1,0 +1,27 @@
+#register-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    margin-right: 60px;
+    margin-bottom: 60px;
+
+    width: 200px;
+}
+
+#register-btn {
+    background: #24b5c6;
+    border-radius: 2px;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+    
+}
+
+#register-btn:hover{
+    background: #26d4e7;
+}

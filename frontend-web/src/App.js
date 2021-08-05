@@ -2,10 +2,12 @@ import React from 'react';
 
 
 import StationForm from './components/StationForm';
+import SeachFormDistance from './components/SearchFormDistance';
+import RegisterButton from './components/RegisterButton';
+
 
 import './global.css';
 import './App.css';
-import './Sidebar.css';
 
 
 
@@ -14,13 +16,17 @@ function App() {
     <>
       <div id="app">
         <aside>
-        <strong>Cadastrar</strong>
           <StationForm />
         </aside>
 
         <main>
-
+          
         </main>
+
+        <aside>
+          <SeachFormDistance />
+          <RegisterButton />
+        </aside>
       </div>
    </>
   );

@@ -41,56 +41,60 @@ function StationForm () {
 
     return (
         <form onSubmit={handleAddStation}>
-          <div className="input-block">
-            <label htmlFor="name">Nome da Estação:</label>
-            <input 
-              name="name" 
-              id="name" 
-              value={name} 
-              required
-              onChange={e => setName(e.target.value)}
-            />
-          </div>
-          <div className="input-radio-block">
-            <span>Abastecida:</span>
-            <label htmlFor="sim">Sim</label>
-            <input name="sim" id="sim" type="radio" value="true"
-             checked={status === 'true'}
-             onChange={e => setStatus(e.target.value)} />
-            <label htmlFor="nao">Não</label>
-            <input name="nao" id="nao" type="radio" value="false"
-             checked={status === 'false'}
-             onChange={e => setStatus(e.target.value)} />
-          </div>
-
-          <div className="input-group">
+          <div className="cadastrar">
+            <strong>Cadastrar</strong>
             <div className="input-block">
-              <label htmlFor="latitude">Latitude</label>
-              <input
-              name="latitude" 
-              id="latitude"
-              type="number"
-              value={latitude} 
-              required
-              onChange={e => setLatitude(e.target.value)}
-              />
-            </div>  
-
-            <div className="input-block">
-              <label htmlFor="longitude">Longitude</label>
+              <label htmlFor="name">Nome da Estação:</label>
               <input 
-                name="longitude" 
-                id="longitude"
-                type="number"
-                value={longitude}  
+                name="name" 
+                id="name" 
+                value={name} 
                 required
-                onChange={e => setLongitude(e.target.value)}
-                />
+                onChange={e => setName(e.target.value)}
+              />
             </div>
-          </div>
-          <div className="button-group">
-            <button type="submit">Salvar</button>
-            <button type="button" value="cancel">Cancelar</button>
+            <div className="input-radio-block">
+              <span>Abastecida:</span>
+              <label htmlFor="sim">Sim</label>
+              <input name="sim" id="sim" type="radio" value="true"
+                checked={status === 'true'}
+                onChange={e => setStatus(e.target.value)} />
+              <label htmlFor="nao">Não</label>
+              <input name="nao" id="nao" type="radio" value="false"
+                checked={status === 'false'}
+                onChange={e => setStatus(e.target.value)} />
+            </div>
+
+            <div className="input-group">
+              <div className="input-block">
+                <label htmlFor="latitude">Latitude</label>
+                <input
+                  name="latitude" 
+                  id="latitude"
+                  type="number"
+                  value={latitude} 
+                  required
+                  onChange={e => setLatitude(e.target.value)}
+                />
+              </div>  
+
+              <div className="input-block">
+                <label htmlFor="longitude">Longitude</label>
+                <input 
+                  name="longitude" 
+                  id="longitude"
+                  type="number"
+                  value={longitude}  
+                  required
+                  onChange={e => setLongitude(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="button-group">
+              <button type="submit">Salvar</button>
+              <button type="button" value="cancel">Cancelar</button>
+            </div>
           </div>
         </form>
     );

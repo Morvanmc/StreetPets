@@ -1,5 +1,17 @@
-form {
-    margin-top: 30px;
+.cadastrar {
+    width: 320px;
+    background: #FFF;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 2px;
+    padding: 30px 20px;
+}
+
+form strong {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .input-block + .input-block {
@@ -69,7 +81,7 @@ form {
 }
 
 button[type=submit] {
-    background: #7d40e7;
+    background: #1590ff;
     border-radius: 2px;
     border: 0;
     padding: 15px 20px;
@@ -82,11 +94,11 @@ button[type=submit] {
 }
 
 button[type=submit]:hover{
-    background: #6931ca;
+    background: #1c77c7;
 }
 
 button[type=button] {
-    background: #DC143C;
+    background: #db4a39;
     border-radius: 2px;
     border: 0;
     padding: 15px 20px;
@@ -99,5 +111,5 @@ button[type=button] {
 }
 
 button[type=button]:hover{
-    background: #EA0E0E;
+    background: #ef3a25;
 }
