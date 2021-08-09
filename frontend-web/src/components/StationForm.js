@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
+import dogImg from '../img/dog.png';
+import catImg from '../img/cat.png';
 
 import './StationForm.css';
 
 function StationForm () {
-  const [name, setName] = useState('');
+  const [nameStation, setNameStation] = useState('');
+  const [pet_avatar, setPet_avatar] = useState('');
   const [status, setStatus] = useState('');
+  const [userName, setUserName] = useState('');
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
 
@@ -30,13 +34,17 @@ function StationForm () {
     e.preventDefault();
 
     await api.post('/stations', {
-      name,
+      nameStation,
+      pet_avatar,
       status,
+      userName,
       latitude,
       longitude,
     })
-    setName('');
-    setStatus(''); 
+    setNameStation('');
+    setPet_avatar('');
+    setStatus('');
+    setUserName(''); 
   }
 
     return (
@@ -44,15 +52,28 @@ function StationForm () {
           <div className="cadastrar">
             <strong>Cadastrar</strong>
             <div className="input-block">
-              <label htmlFor="name">Nome da Estação:</label>
+              <label htmlFor="nameStation">Nome da Estação:</label>
               <input 
-                name="name" 
-                id="name" 
-                value={name} 
+                name="nameStation" 
+                id="nameStation" 
+                value={nameStation} 
                 required
-                onChange={e => setName(e.target.value)}
+                onChange={e => setNameStation(e.target.value)}
               />
             </div>
+
+            <div className="input-radio-block">
+              <span>Tipo de animal:</span>
+              <label htmlFor="dog"><img src={dogImg} alt="Dog"></img></label>
+              <input name="dog" id="dog" type="radio" value="dog"
+                checked={pet_avatar === 'dog'}
+                onChange={e => setPet_avatar(e.target.value)} />
+              <label htmlFor="cat"><img src={catImg} alt="Dog"></img></label>
+              <input name="cat" id="cat" type="radio" value="cat"
+                checked={pet_avatar === 'cat'}
+                onChange={e => setPet_avatar(e.target.value)} />
+            </div>
+
             <div className="input-radio-block">
               <span>Abastecida:</span>
               <label htmlFor="sim">Sim</label>
@@ -63,6 +84,17 @@ function StationForm () {
               <input name="nao" id="nao" type="radio" value="false"
                 checked={status === 'false'}
                 onChange={e => setStatus(e.target.value)} />
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="userName">Criada por:</label>
+              <input 
+                name="userName" 
+                id="userName" 
+                value={userName} 
+                required
+                onChange={e => setUserName(e.target.value)}
+              />
             </div>
 
             <div className="input-group">

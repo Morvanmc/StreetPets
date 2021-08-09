@@ -73,6 +73,11 @@ form strong {
     margin-right: 10px;
 }
 
+.input-radio-block img {
+    width: 35px;
+    height: 35px;
+}
+
 .button-group {
     display: grid;
     gap: 20px;

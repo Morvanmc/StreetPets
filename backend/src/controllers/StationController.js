@@ -15,7 +15,7 @@ module.exports = {
     //Cadastrar Estações
     
     async store(req, res) {
-        const { name, status, pet_avatar = '', latitude, longitude } = req.body;
+        const { nameStation, status, pet_avatar, userName, latitude, longitude } = req.body;
     
         let station = await Station.findOne({ name });
 
@@ -26,9 +26,10 @@ module.exports = {
             };
             
             station = await Station.create({
-                name,
+                nameStation,
                 status,
                 pet_avatar,
+                userName,
                 location,
             });
         }
