@@ -17,7 +17,7 @@ module.exports = {
     async store(req, res) {
         const { nameStation, status, pet_avatar, userName, latitude, longitude } = req.body;
     
-        let station = await Station.findOne({ name });
+        let station = await Station.findOne({ nameStation });
 
         if(!station) {
             const location = {

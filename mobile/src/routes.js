@@ -13,10 +13,9 @@ function Routes() {
             <Stack.Navigator initialRouteName="Street Pets"
                 screenOptions={{
                     headerTintColor: 'white',
-                    headerStyle: { backgroundColor: '#26d4e7' },
-                    
+                    headerStyle: { backgroundColor: '#1c77c7' },                    
                 }}>
-                <Stack.Screen name="Street Pets" component={Main} />
+                <Stack.Screen name="Street Pets" component={Main}/>
                 <Stack.Screen name="Informações" component={InfoStation}/>
             </Stack.Navigator>
         </NavigationContainer>

@@ -2,12 +2,12 @@ import React from 'react';
 
 
 import StationForm from './components/StationForm';
-import SeachFormDistance from './components/SearchFormDistance';
-import RegisterButton from './components/RegisterButton';
+import StationInfo from './components/StationInfo';
 
 
 import './global.css';
 import './App.css';
+import './Main.css'
 
 
 
@@ -20,13 +20,8 @@ function App() {
         </aside>
 
         <main>
-          
+          <StationInfo />
         </main>
-
-        <aside>
-          <SeachFormDistance />
-          <RegisterButton />
-        </aside>
       </div>
    </>
   );
