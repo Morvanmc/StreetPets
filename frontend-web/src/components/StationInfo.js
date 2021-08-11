@@ -21,11 +21,15 @@ function StationInfo() {
     return(
         <ul>
             {stations.map(station => (
-                <li className="station-item">
+                <li key={station._id} className="station-item">
                 <img src={station.pet_avatar === 'dog' ? dogImg : catImg} 
                         alt="Pet" />
-                    <strong>{station.nameStation}</strong><br></br>
-                    <span>{station.status ? 'Cheia' : 'Vazia'}</span>
+                    <strong>{station.nameStation}</strong>
+                    <span 
+                        className={station.status === false ? 'redStatus status' : 'greenStatus status' }
+                    >
+                        {station.status ? 'Cheia' : 'Vazia'}
+                    </span>
                     <span>by: {station.userName}</span>               
             </li>
             ))}

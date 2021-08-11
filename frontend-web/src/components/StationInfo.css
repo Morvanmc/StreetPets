@@ -19,4 +19,21 @@ li.station-item img {
     width: 54px;
     height: 54px;
     border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+li.station-item strong {
+    margin-bottom: 15px;
+}
+
+span.status {
+    margin-bottom: 15px;
+}
+
+.greenStatus {
+    color: #7CBB00;
+}
+
+.redStatus {
+    color: #EA4335;
 }
